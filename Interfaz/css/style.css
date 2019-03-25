@@ -1,0 +1,63 @@
+#container-form-usuario{
+	border-right: 1px solid #aaaaaa;
+}
+
+*::-moz-selection{
+   background: black;
+   color: #fff;
+}
+
+*::selection {
+   background: black;
+   color: #fff;
+}
+
+#inputs-vendedor,#inputs-comprador{
+	display: none;
+}
+
+#table-consulta1,#info-consulta1{
+	display: none;
+	text-align: justify;
+}
+
+#table-consulta2,#info-consulta2{
+	display: none;
+	text-align: justify;
+}
+
+#table-consulta3,#info-consulta3{
+	display: none;
+	text-align: justify;
+}
+.container-small{
+	padding: 5px;
+}
+
+#table-info,#row-consultas{
+	margin-top: 0px !important;
+	padding-top: 3rem !important;
+	padding-left: 2rem !important;
+	padding-right: 2rem !important;
+
+}
+
+#formularios{
+	padding-bottom: 2rem !important;
+}
+.mb{
+	margin-bottom: 2px !important;
+}
+
+#table-consulta1,#table-consulta3{
+	height: 100%;
+	width: 100%;
+}
+
+#table-info{
+	padding-bottom: 1rem !important;
+}
+
+#consultas{
+	padding-top: 2rem !important;
+}
