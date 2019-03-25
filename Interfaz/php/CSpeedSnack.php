@@ -61,21 +61,21 @@ if (!strcmp($method,"insertarUsuario")){
 	}else{
 		echo 0;
 	}
-}else if (!strcmp($method,"insertarSubscripcion")){
+}else if (!strcmp($method,"insertarSuscripcion")){
 	$notificacion=$_POST['notificacion'];
 	//$fechaInicio=$_POST['fechaInicio'];
 	$usuarioLoginSeguidor=$_POST['usuarioSeguidor'];
 	$usuarioLoginSeguido=$_POST['usuarioSeguido'];
 
-	$query= "INSERT INTO `subscripcion`(`codigo_subs`, `notificacion`, `fecha_inicio`, `usuario_login_seguidor`, `usuario_login_seguido`) VALUES (NULL,'$notificacion', NOW(),'$usuarioLoginSeguidor','$usuarioLoginSeguido')";
+	$query= "INSERT INTO `suscripcion`(`codigo_suscripcion`, `notificacion`, `fecha_inicio`, `usuario_login_seguidor`, `usuario_login_seguido`) VALUES (NULL,'$notificacion', NOW(),'$usuarioLoginSeguidor','$usuarioLoginSeguido')";
 	$result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
 	if($result){
 		echo 1;
 	}else{
 		echo 0;
 	}
-}else if (!strcmp($method,"verSubscripcion")){
-	$query="SELECT * FROM `subscripcion` WHERE 1";
+}else if (!strcmp($method,"verSuscripcion")){
+	$query="SELECT * FROM `suscripcion` WHERE 1";
 	$result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
 	if($result){
 		$table="";
@@ -86,12 +86,12 @@ if (!strcmp($method,"insertarUsuario")){
 				$notificacion = "No";
 			}
 			$table=$table."<tr>";
-			$table=$table."<td>".$fila['codigo_subs']."</td>";
+			$table=$table."<td>".$fila['codigo_suscripcion']."</td>";
 			$table=$table."<td>".$fila['usuario_login_seguidor']."</td>";
 			$table=$table."<td>".$fila['usuario_login_seguido']."</td>";
 			$table=$table."<td>".$fila['fecha_inicio']."</td>";
 			$table=$table."<td>".$notificacion."</td>";
-			$table=$table."<td><center><button class='btn btn-danger btn-xs eliminar-subscripcion' id-subscripcion='".$fila['codigo_subs']."'>
+			$table=$table."<td><center><button class='btn btn-danger btn-xs eliminar-suscripcion' id-suscripcion='".$fila['codigo_suscripcion']."'>
 						    <i class='fa fa-trash-o'></i></button></center></td>";
 			$table=$table. "</tr>";
 			
@@ -102,9 +102,9 @@ if (!strcmp($method,"insertarUsuario")){
 		echo 0;
 	}
 
-}else if (!strcmp($method,"eliminarSubscripcion")){
-	$codigoSubs=$_POST['codigoSubs'];
-	$query="DELETE FROM `subscripcion` WHERE `codigo_subs` = '$codigoSubs'";
+}else if (!strcmp($method,"eliminarSuscripcion")){
+	$codigoSuscripcion=$_POST['codigoSuscripcion'];
+	$query="DELETE FROM `suscripcion` WHERE `codigo_suscripcion` = '$codigoSuscripcion'";
 	$result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
 	if($result){
 		echo 1;

@@ -74,13 +74,13 @@ ALTER TABLE COMPRA ADD
 
 
         
-CREATE TABLE SUBSCRIPCION(
-	codigo_subs int(12) AUTO_INCREMENT,
+CREATE TABLE SUSCRIPCION(
+	codigo_suscripcion int(12) AUTO_INCREMENT,
 	notificacion tinyint(1) NOT NULL,
 	fecha_inicio date NOT NULL,
 	usuario_login_seguidor varchar(20) NOT NULL,
 	usuario_login_seguido varchar(20) NOT NULL,
-	PRIMARY KEY (codigo_subs),
+	PRIMARY KEY (codigo_suscripcion),
 	UNIQUE (usuario_login_seguidor, usuario_login_seguido),
 	FOREIGN KEY (usuario_login_seguido) REFERENCES USUARIO(usuario_login) ON DELETE CASCADE,
 	FOREIGN KEY (usuario_login_seguidor) REFERENCES USUARIO(usuario_login) ON DELETE CASCADE,
@@ -278,26 +278,26 @@ INSERT INTO USUARIO (`usuario_login`,`correo_institucional`, `nombre`, `facultad
 
 
 
--- SUBSCRIPCIONES
+-- SUSCRIPCIONES
 
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	7,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	7,              		  -- codigo_suscripcion
 	0,  					  -- notificacion
 	'2019-09-22',        	  -- fecha_inicio
 	'jcendaless' ,          -- usuario_login_seguidor
 	'tayswift'          	  -- usuario_login_seguido
 );
 
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	8,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	8,              		  -- codigo_suscripcion
 	1,  					  -- notificacion
 	'2019-09-22',        	  -- fecha_inicio
 	'tayswift' ,          -- usuario_login_seguidor
 	'jportegame'          	  -- usuario_login_seguido
 );
 
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	9,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	9,              		  -- codigo_suscripcion
 	0,  					  -- notificacion
 	'2019-09-22',        	  -- fecha_inicio
 	'pameander' ,         	  -- usuario_login_seguidor
@@ -305,66 +305,66 @@ INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario
 );
 
 
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	10,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	10,              		  -- codigo_suscripcion
 	1,  					  -- notificacion
 	'2019-09-22',        	  -- fecha_inicio
 	'acarrasquillal' ,          -- usuario_login_seguidor
 	'jcendaless'          	  -- usuario_login_seguido
 );
 
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	11,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	11,              		  -- codigo_suscripcion
 	0,  					  -- notificacion
 	'2019-09-22',        	  -- fecha_inicio
 	'jpajoyl' ,          -- usuario_login_seguidor
 	'jcandelap'          	  -- usuario_login_seguido
 );
 
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	12,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	12,              		  -- codigo_suscripcion
 	1,  					  -- notificacion
 	'2019-09-22',        	  -- fecha_inicio
 	'jcandelap' ,          -- usuario_login_seguidor
 	'jpajoyl'          	  -- usuario_login_seguido
 );
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	1,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	1,              		  -- codigo_suscripcion
 	1,  					  -- notificacion
 	'2019-07-19',        	  -- fecha_inicio
 	'jcendaless' ,          -- usuario_login_seguidor
 	'jpajoyl'          	  -- usuario_login_seguido
 );
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	2,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	2,              		  -- codigo_suscripcion
 	0,  					  -- notificacion
 	'2019-07-19',        	  -- fecha_inicio
 	'jcendaless' ,          -- usuario_login_seguidor
 	'cricop'          	  -- usuario_login_seguido
 );
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	3,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	3,              		  -- codigo_suscripcion
 	1,  					  -- notificacion
 	'2019-07-19',        	  -- fecha_inicio
 	'jportegame' ,          -- usuario_login_seguidor
 	'jcendaless'          	  -- usuario_login_seguido
 );
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	4,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	4,              		  -- codigo_suscripcion
 	0,  					  -- notificacion
 	'2019-07-19',        	  -- fecha_inicio
 	'jcandelap' ,          -- usuario_login_seguidor
 	'cricop'          	  -- usuario_login_seguido
 );
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	5,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	5,              		  -- codigo_suscripcion
 	1,  					  -- notificacion
 	'2019-07-19',        	  -- fecha_inicio
 	'acarrasquillal' ,          -- usuario_login_seguidor
 	'tayswift'          	  -- usuario_login_seguido
 );
-INSERT INTO SUBSCRIPCION (`codigo_subs`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
-	6,              		  -- codigo_subs
+INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
+	6,              		  -- codigo_suscripcion
 	0,  					  -- notificacion
 	'2019-07-19',        	  -- fecha_inicio
 	'tayswift' ,          -- usuario_login_seguidor
