@@ -489,7 +489,7 @@
 
   <div class="copyright py-4 text-center text-white">
     <div class="container">
-      <small>Universidad Nacional de Colombia | Bases de datos 1 2018-1 Francisco Moreno</small>
+      <small>Universidad Nacional de Colombia | Bases de datos 1 2018-2 Francisco Moreno</small>
     </div>
   </div>
 
