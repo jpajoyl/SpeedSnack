@@ -1,4 +1,4 @@
-CREATE DATABASE `SpeedSnack`;
+﻿CREATE DATABASE `SpeedSnack`;
 
 USE `SpeedSnack`;
 
@@ -111,7 +111,8 @@ CREATE TABLE PRODUCTO(
 		`codigo_producto` INT NOT NULL AUTO_INCREMENT,
 		`nombre` VARCHAR(100) NOT NULL,
 		`categoria` VARCHAR(100),
-		PRIMARY KEY(`codigo_producto`)
+		PRIMARY KEY(`codigo_producto`),
+		UNIQUE(`nombre`)
 	);
 
 CREATE TABLE INVENTARIOxPRODUCTOxVENDEDOR(
@@ -151,3 +152,5 @@ CREATE TABLE ARTICULO_POR_COMPRA(
 ALTER TABLE ARTICULO_POR_COMPRA ADD 
 	CONSTRAINT `chk_unidades_compradas`
 		CHECK (`unidades_compradas`>0);
+
+

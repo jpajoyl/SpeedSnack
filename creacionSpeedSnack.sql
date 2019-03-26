@@ -118,7 +118,8 @@ CREATE TABLE PRODUCTO(
 		`codigo_producto` INT NOT NULL AUTO_INCREMENT,
 		`nombre` VARCHAR(100) NOT NULL,
 		`categoria` VARCHAR(100),
-		PRIMARY KEY(`codigo_producto`)
+		PRIMARY KEY(`codigo_producto`),
+		UNIQUE(`nombre`)
 	);
 
 CREATE TABLE INVENTARIOxPRODUCTOxVENDEDOR(
@@ -359,7 +360,7 @@ INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `u
 INSERT INTO SUSCRIPCION (`codigo_suscripcion`,`notificacion`, `fecha_inicio`, `usuario_login_seguidor`,`usuario_login_seguido`) VALUES (
 	5,              		  -- codigo_suscripcion
 	1,  					  -- notificacion
-	'2019-07-19',        	  -- fecha_inicio
+	'2019-09-22',        	  -- fecha_inicio
 	'acarrasquillal' ,          -- usuario_login_seguidor
 	'tayswift'          	  -- usuario_login_seguido
 );
