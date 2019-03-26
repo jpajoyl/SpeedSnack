@@ -63,6 +63,16 @@ $(document).ready(function() {
     })
   }
 
+  $('#input-usuario-login').bind("keyup", function(e) {
+    var usuarioLogin=$("#input-usuario-login").val();
+    if(usuarioLogin!=""){
+      document.getElementById("input-correo-institucional").value=usuarioLogin+"@unal.edu.co";
+    }else{
+      document.getElementById("input-correo-institucional").value="";
+    }
+    
+  });
+
   $("#form-usuario").submit(function(event){
    event.preventDefault();
    var usuarioLogin=$("#input-usuario-login").val();

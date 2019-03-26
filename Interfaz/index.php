@@ -68,7 +68,7 @@
       <div class="row">
         <div class="col-lg-6" id="container-form-usuario">
           <h3 class="text-center text-uppercase text-secondary mb-0">Usuario</h3>
-          <form name="form-usuario" id="form-usuario" novalidate="novalidate">
+          <form name="form-usuario" id="form-usuario" novalidate="novalidate" autocomplete="off">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Usuario institucional</label>
@@ -78,7 +78,7 @@
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Correo institucional</label>
-                <input class="form-control" id="input-correo-institucional" type="email" placeholder="Correo institucional" required="required">
+                <input class="form-control" id="input-correo-institucional" type="email" placeholder="Correo institucional" required="required" disabled>
               </div>
             </div>
             <div class="control-group">
@@ -158,7 +158,7 @@
         </div>
         <div class="col-lg-6">
           <h3 class="text-center text-uppercase text-secondary mb-0">Suscripcion</h3>
-          <form name="form-suscripcion" id="form-suscripcion" novalidate="novalidate">
+          <form name="form-suscripcion" id="form-suscripcion" novalidate="novalidate" autocomplete="off">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Usuario seguidor</label>
@@ -362,7 +362,7 @@
                 <h4 id="info-busqueda1">Con el usuario_login de un usuario se deben mostrar todas las suscripciones a las cuales el usuario está suscrito(o sea, de los cuales el usuario es seguidor).</h4>
               </div>
               <div class="col-lg-6">
-                <form name="form-busqueda1" id="form-busqueda1" novalidate="novalidate">
+                <form name="form-busqueda1" id="form-busqueda1" novalidate="novalidate" autocomplete="off">
                   <div class="form-group floating-label-form-group controls mb-0 pb-2">
                     <label>Usuario login </label>
                     <input class="form-control" id="input-usuario-login-busqueda" type="text" placeholder="Usuario login " required="required">
@@ -414,7 +414,7 @@
                 </h4>
               </div>
               <div class="col-lg-6">
-                <form name="form-busqueda2" id="form-busqueda2" novalidate="novalidate">
+                <form name="form-busqueda2" id="form-busqueda2" novalidate="novalidate" autocomplete="off">
                   <div class="form-group floating-label-form-group controls mb-0 pb-2">
                     <label>Codigo suscripcion</label>
                     <input class="form-control" id="input-suscripcion-busqueda" type="number" placeholder="Codigo suscripcion" required="required">
