@@ -5,8 +5,8 @@ todo el codigo html de la pagina junto con todos los formularios y tablas.
 	El formulario para la insercion de usuario se encuentra a partir de la linea 71.
 	El formulario para la insercion de suscripcion se encuentra a partir de la linea 161.
 	Las tablas de usuario y suscripcion se encuentran a partir de la linea 199.
-	Los botones de las consultas se encuentran a partir de la linea 254.
-	Los formularios y tablas de las busquedas se encuentran a partir de la linea 328.
+	Los botones de las consultas se encuentran a partir de la linea 264.
+	Los formularios y tablas de las busquedas se encuentran a partir de la linea 353.
 
 2) El archivo donde se encuentran los datos de creacion de la base de datos y algunas insersiones ejemplo 
 es creacionSpeedSnack.sql, y el archivo BaseDeDatosSpeedSnack.txt contiene unicamente el codigo para crear
