@@ -303,6 +303,8 @@ $(document).ready(function() {
             }else if(data==2){
               $("#tbody-consulta1").html("");
               $("#no-consulta1").fadeIn(200);
+              $("#no-consulta2").fadeOut(0);
+              $("#no-consulta3").fadeOut(0);
             }else if(data==0){
               Swal(
                 'Error!',
@@ -333,6 +335,8 @@ $(document).ready(function() {
             }else if(data==2){
               $("#tbody-consulta2").html("");
               $("#no-consulta2").fadeIn(200);
+              $("#no-consulta1").fadeOut(0);
+              $("#no-consulta3").fadeOut(0);
             }else if(data==0){
               Swal(
                 'Error!',
@@ -362,6 +366,8 @@ $(document).ready(function() {
             }else if(data==2){
               $("#tbody-consulta3").html("");
               $("#no-consulta3").fadeIn(200);
+              $("#no-consulta1").fadeOut(0);
+              $("#no-consulta2").fadeOut(0);
             }else if(data==0){
               Swal(
                 'Error!',
