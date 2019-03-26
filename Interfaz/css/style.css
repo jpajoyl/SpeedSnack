@@ -69,3 +69,7 @@
 #info-busqueda1,#info-busqueda2{
 	text-align: justify;
 }
+
+.display-none{
+	display: none;
+}

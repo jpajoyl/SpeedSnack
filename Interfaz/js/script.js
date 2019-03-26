@@ -45,7 +45,19 @@ $(document).ready(function() {
       type: 'GET',
       success:function(data){
         if(data!=""){
-          $("#tbody-usuarios").html(data);
+          if(data!=0 && data!=2){
+             $("#tbody-usuarios").html(data);
+             $("#no-usuarios").fadeOut(0);
+           }else if(data==2){
+             $("#tbody-usuarios").html("");
+             $("#no-usuarios").fadeIn(200);
+           }else if(data==0){
+             Swal(
+               'Error!',
+               'Ha ocurrido un error!',
+               'error'
+               );
+           }
         }
       }
     })
@@ -167,7 +179,19 @@ $(document).ready(function() {
        type: 'GET',
        success:function(data){
          if(data!=""){
-           $("#tbody-suscripciones").html(data);
+           if(data!=0 && data!=2){
+             $("#tbody-suscripciones").html(data);
+             $("#no-suscripciones").fadeOut(0);
+           }else if(data==2){
+             $("#tbody-suscripciones").html("");
+             $("#no-suscripciones").fadeIn(200);
+           }else if(data==0){
+             Swal(
+               'Error!',
+               'Ha ocurrido un error!',
+               'error'
+               );
+           }
          }
        }
      })
@@ -238,7 +262,6 @@ $(document).ready(function() {
      type: 'POST',
      data: {"codigoSuscripcion":idSuscripcion},
      success:function(data){
-      console.log(data);
       if(data==1){
        Swal(
          'Bien!',
@@ -271,8 +294,22 @@ $(document).ready(function() {
             $("#table-consulta2").fadeOut(0);
             $("#table-consulta1").fadeIn(0);
             $("#info-consulta1").fadeIn(0);
-            $("#tbody-consulta1").html(data);
-            
+            $("#table-consulta1").fadeIn(0);
+            if(data!=0 && data!=2){
+              $("#tbody-consulta1").html(data);
+              $("#no-consulta1").fadeOut(0);
+              $("#no-consulta2").fadeOut(0);
+              $("#no-consulta3").fadeOut(0);
+            }else if(data==2){
+              $("#tbody-consulta1").html("");
+              $("#no-consulta1").fadeIn(200);
+            }else if(data==0){
+              Swal(
+                'Error!',
+                'Ha ocurrido un error!',
+                'error'
+                );
+            }
           }
         })
       });
@@ -287,8 +324,22 @@ $(document).ready(function() {
             $("#table-consulta1").fadeOut(0);
             $("#info-consulta2").fadeIn(0);
             $("#table-consulta2").fadeIn(0);
-            $("#tbody-consulta2").html(data);
-            
+            $("#table-consulta2").fadeIn(0);
+            if(data!=0 && data!=2){
+              $("#tbody-consulta2").html(data);
+              $("#no-consulta1").fadeOut(0);
+              $("#no-consulta2").fadeOut(0);
+              $("#no-consulta3").fadeOut(0);
+            }else if(data==2){
+              $("#tbody-consulta2").html("");
+              $("#no-consulta2").fadeIn(200);
+            }else if(data==0){
+              Swal(
+                'Error!',
+                'Ha ocurrido un error!',
+                'error'
+                );
+            }
           }
         })
       });
@@ -303,8 +354,21 @@ $(document).ready(function() {
             $("#table-consulta2").fadeOut(0);
             $("#info-consulta3").fadeIn(0);
             $("#table-consulta3").fadeIn(0);
-            $("#tbody-consulta3").html(data);
-            
+            if(data!=0 && data!=2){
+              $("#tbody-consulta3").html(data);
+              $("#no-consulta1").fadeOut(0);
+              $("#no-consulta2").fadeOut(0);
+              $("#no-consulta3").fadeOut(0);
+            }else if(data==2){
+              $("#tbody-consulta3").html("");
+              $("#no-consulta3").fadeIn(200);
+            }else if(data==0){
+              Swal(
+                'Error!',
+                'Ha ocurrido un error!',
+                'error'
+                );
+            }
           }
         })
       });
@@ -322,7 +386,19 @@ $(document).ready(function() {
         type: 'POST',
         data: data,
         success:function(data){
-         $("#tbody-suscripciones-b1").html(data);
+          if(data!=0 && data!=2){
+            $("#tbody-suscripciones-b1").html(data);
+            $("#no-busqueda1").fadeOut(0);
+          }else if(data==2){
+            $("#tbody-suscripciones-b1").html("");
+            $("#no-busqueda1").fadeIn(200);
+          }else if(data==0){
+            Swal(
+              'Error!',
+              'Ha ocurrido un error!',
+              'error'
+              );
+          }
        }
      });
 
@@ -338,7 +414,19 @@ $(document).ready(function() {
         type: 'POST',
         data: data,
         success:function(data){
-         $("#tbody-suscripciones-b2").html(data);
+          if(data!=0 && data!=2){
+            $("#tbody-suscripciones-b2").html(data);
+            $("#no-busqueda2").fadeOut(0);
+          }else if(data==2){
+            $("#tbody-suscripciones-b2").html("");
+            $("#no-busqueda2").fadeIn(200);
+          }else if(data==0){
+            Swal(
+              'Error!',
+              'Ha ocurrido un error!',
+              'error'
+              );
+          }
        }
      });
 

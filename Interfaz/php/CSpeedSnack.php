@@ -28,27 +28,31 @@ if (!strcmp($method,"insertarUsuario")){
 	$query="SELECT * FROM `usuario` WHERE 1 ORDER BY `tipo` ASC";
 	$result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
 	if($result){
-		$table="";
-		while($fila=$result->fetch_array(MYSQLI_ASSOC)){
-			$table=$table."<tr>";
-			$table=$table."<td>".$fila['usuario_login']."</td>";
-			$table=$table."<td>".$fila['correo_institucional']."</td>";
-			$table=$table."<td>".$fila['contraseña']."</td>";
-			$table=$table."<td>".$fila['nombre']."</td>";
-			$table=$table."<td>".$fila['descripcion']."</td>";
-			$table=$table."<td>".$fila['facultad']."</td>";
-			$table=$table."<td>".$fila['tipo']."</td>";
-			$table=$table."<td>".$fila['telefono']."</td>";
-			$table=$table."<td>".(($fila['disponibilidad']=="1")?"Si":(($fila['disponibilidad']=="0")?"No":""))."</td>";
-			$table=$table."<td>".$fila['campus']."</td>";
-			$table=$table."<td>".$fila['gustos']."</td>";
-			$table=$table."<td><center><button class='btn btn-danger btn-xs eliminar-usuario' id-usuario='".$fila['usuario_login']."'>
-						    <i class='fa fa-trash-o'></i></button></center></td>";
-			$table=$table. "</tr>";
-			
-		}
+		if(mysqli_num_rows($result)>0){
+			$table="";
+			while($fila=$result->fetch_array(MYSQLI_ASSOC)){
+				$table=$table."<tr>";
+				$table=$table."<td>".$fila['usuario_login']."</td>";
+				$table=$table."<td>".$fila['correo_institucional']."</td>";
+				$table=$table."<td>".$fila['contraseña']."</td>";
+				$table=$table."<td>".$fila['nombre']."</td>";
+				$table=$table."<td>".$fila['descripcion']."</td>";
+				$table=$table."<td>".$fila['facultad']."</td>";
+				$table=$table."<td>".$fila['tipo']."</td>";
+				$table=$table."<td>".$fila['telefono']."</td>";
+				$table=$table."<td>".(($fila['disponibilidad']=="1")?"Si":(($fila['disponibilidad']=="0")?"No":""))."</td>";
+				$table=$table."<td>".$fila['campus']."</td>";
+				$table=$table."<td>".$fila['gustos']."</td>";
+				$table=$table."<td><center><button class='btn btn-danger btn-xs eliminar-usuario' id-usuario='".$fila['usuario_login']."'>
+							    <i class='fa fa-trash-o'></i></button></center></td>";
+				$table=$table. "</tr>";
+				
+			}
 
-		echo $table;
+			echo $table;
+		}else{
+			echo 2;
+		}
 	}else{
 		echo 0;
 	}
@@ -78,26 +82,30 @@ if (!strcmp($method,"insertarUsuario")){
 	$query="SELECT * FROM `suscripcion` WHERE 1";
 	$result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
 	if($result){
-		$table="";
-		while($fila=$result->fetch_array(MYSQLI_ASSOC)){
-			if ($fila['notificacion'] == 1){
-				$notificacion = "Si";
-			}else{
-				$notificacion = "No";
+		if(mysqli_num_rows($result)>0){
+			$table="";
+			while($fila=$result->fetch_array(MYSQLI_ASSOC)){
+				if ($fila['notificacion'] == 1){
+					$notificacion = "Si";
+				}else{
+					$notificacion = "No";
+				}
+				$table=$table."<tr>";
+				$table=$table."<td>".$fila['codigo_suscripcion']."</td>";
+				$table=$table."<td>".$fila['usuario_login_seguidor']."</td>";
+				$table=$table."<td>".$fila['usuario_login_seguido']."</td>";
+				$table=$table."<td>".$fila['fecha_inicio']."</td>";
+				$table=$table."<td>".$notificacion."</td>";
+				$table=$table."<td><center><button class='btn btn-danger btn-xs eliminar-suscripcion' id-suscripcion='".$fila['codigo_suscripcion']."'>
+							    <i class='fa fa-trash-o'></i></button></center></td>";
+				$table=$table. "</tr>";
+				
 			}
-			$table=$table."<tr>";
-			$table=$table."<td>".$fila['codigo_suscripcion']."</td>";
-			$table=$table."<td>".$fila['usuario_login_seguidor']."</td>";
-			$table=$table."<td>".$fila['usuario_login_seguido']."</td>";
-			$table=$table."<td>".$fila['fecha_inicio']."</td>";
-			$table=$table."<td>".$notificacion."</td>";
-			$table=$table."<td><center><button class='btn btn-danger btn-xs eliminar-suscripcion' id-suscripcion='".$fila['codigo_suscripcion']."'>
-						    <i class='fa fa-trash-o'></i></button></center></td>";
-			$table=$table. "</tr>";
-			
-		}
 
-		echo $table;
+			echo $table;
+		}else{
+			echo 2;
+		}
 	}else{
 		echo 0;
 	}
@@ -114,23 +122,20 @@ if (!strcmp($method,"insertarUsuario")){
 }else if (!strcmp($method,"usuarioOpciones")){
 	$query="SELECT `usuario_login` FROM `usuario` WHERE 1";
 	$result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
+	$menu="";
+	$menu=$menu.'<option value="">Selecciona un usuario</option>';
 	if($result){
-		$menu="";
-		$menu=$menu.'<option value="">Selecciona un usuario</option>';
 		while($fila=$result->fetch_array(MYSQLI_ASSOC)){
 			$menu=$menu.'<option value="'.$fila['usuario_login'].'">'.$fila['usuario_login'].'</option>';
 		}
-		echo $menu;
 	}else{
 		echo 0;
 	}
+	echo $menu;
 }
 
 
 mysqli_close($conexion);
- 
-
-
 
 
  ?>

@@ -223,6 +223,11 @@
               
             </tbody>
           </table>
+          <div class="alert alert-danger display-none" role="alert" id="no-usuarios">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            Al parecer no hay registros <i class="fa fa-arrow-up"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -246,6 +251,11 @@
               
             </tbody>
           </table>
+          <div class="alert alert-danger display-none" role="alert" id="no-suscripciones">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          Al parecer no hay registros <i class="fa fa-arrow-up"></i>
+        </div>
         </div>
       </div>
     </div>
@@ -287,6 +297,11 @@
 
           </tbody>
         </table>
+        <div class="alert alert-danger display-none" role="alert" id="no-consulta1">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          Al parecer no hay registros, intenta una nueva consulta <i class="fa fa-arrow-up"></i>
+        </div>
         <table id = "table-consulta2" class="mt-4 table table-bordered table-hover">
           <thead class="thead-light">
             <h4 id="info-consulta2">El segundo botón debe mostrar el usuario_login de cada usuario, su nombre y el número de suscripciones del cual es seguidor . Si el usuario es seguidor de cero suscripciones, debe salir con número de suscripciones igual a cero.</h4>
@@ -300,6 +315,11 @@
 
           </tbody>
         </table>
+        <div class="alert alert-danger display-none" role="alert" id="no-consulta2">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          Al parecer no hay registros, intenta una nueva consulta <i class="fa fa-arrow-up"></i>
+        </div>
         <table id = "table-consulta3" class="mt-4 table table-bordered table-hover">
           <thead class="thead-light">
             <h4 id="info-consulta3">El tercer botón debe mostrar todos los datos de los usuarios tal que todos las suscripciones que el usuario sigue son todos de la misma fecha . Por ejemplo, un usuario que  sigue a de 5 suscripciones y todas las 5 suscripciones son del 22 de abril del 2019 . Nota: El usuario debe ser al menos seguidor  de dos suscripciones para que sea mostrado.</h4>
@@ -321,6 +341,11 @@
 
           </tbody>
         </table>
+        <div class="alert alert-danger display-none" role="alert" id="no-consulta3">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          Al parecer no hay registros, intenta una nueva consulta <i class="fa fa-arrow-up"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -334,63 +359,70 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
-                <h4 id="info-busqueda1">El usuario_login de un usuario y se deben mostrar todas las suscripciones a las cuales el usuario está suscrito(o sea, de los cuales el usuario es seguidor).</h4>
+                <h4 id="info-busqueda1">Con el usuario_login de un usuario se deben mostrar todas las suscripciones a las cuales el usuario está suscrito(o sea, de los cuales el usuario es seguidor).</h4>
               </div>
               <div class="col-lg-6">
                 <form name="form-busqueda1" id="form-busqueda1" novalidate="novalidate">
                   <div class="form-group floating-label-form-group controls mb-0 pb-2">
                     <label>Usuario login </label>
-                    <input class="form-control" id="input-usuario-login-busqueda" type="text" placeholder="Usuario login " required="required" data-validation-required-message="Por favor ingresa el usuario.">
+                    <input class="form-control" id="input-usuario-login-busqueda" type="text" placeholder="Usuario login " required="required">
                   </div>
               </div>
               <div class="col-lg-6">
                   <div class="form-group mt-4">
-                    <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Buscar</button>
+                    <button type="submit" class="btn btn-primary btn-xl" id="buscar-busqueda1">Buscar</button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-          <div class="container-small mt-4">
-            <h3 class="text-center text-uppercase text-secondary mb-0">SUSCRIPCIONES REGISTRADAS</h3>
-            <div class="row mt-4">
-              <div class="col-lg-12">
-                <table class="table table-bordered table-hover" style="margin-left: 0.8%;">
-                  <thead class="thead-light">
-                    <tr>
-                      <th scope="col">Codigo Suscripcion</th>
-                      <th scope="col">Seguidor</th>
-                      <th scope="col">Seguido</th>
-                      <th scope="col">Fecha inicio</th>
-                      <th scope="col">Notificaciones</th>
+          <center>
+            <div class="container-small mt-4">
+              <h3 class="text-center text-uppercase text-secondary mb-0">SUSCRIPCIONES REGISTRADAS</h3>
+              <div class="row mt-4">
+                <div class="col-lg-12">
+                  <table class="table table-bordered table-hover">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">Codigo Suscripcion</th>
+                        <th scope="col">Seguidor</th>
+                        <th scope="col">Seguido</th>
+                        <th scope="col">Fecha inicio</th>
+                        <th scope="col">Notificaciones</th>
 
-                    </tr>
-                  </thead>
-                  <tbody id="tbody-suscripciones-b1">
+                      </tr>
+                    </thead>
+                    <tbody id="tbody-suscripciones-b1">
 
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                  <div class="alert alert-danger display-none" role="alert" id="no-busqueda1">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    Al parecer no hay registros, intenta una nueva busqueda <i class="fa fa-arrow-up"></i>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </center>
         </div>
         <div class="col-lg-12">
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
-                <h4 id="info-busqueda2">El código de una suscripción y se debe mostrar: la fecha de la suscripcion y a continuación todos los datos de los usuarios que son seguidores de al menos una suscripción que pertenezca la fecha de la suscripcion ingresada en la búsqueda. Ejemplo: si se ingresa el código de suscripcion 899 y se trata de una suscripcion del 22 de abril del 2019 , se deben imprimir los datos de todos los usuarios que son seguidores de al menos una suscripcion del 22 de abril del 2019.
+                <h4 id="info-busqueda2">Con el código de una suscripción se debe mostrar: la fecha de la suscripcion y a continuación todos los datos de los usuarios que son seguidores de al menos una suscripción que pertenezca la fecha de la suscripcion ingresada en la búsqueda. Ejemplo: si se ingresa el código de suscripcion 899 y se trata de una suscripcion del 22 de abril del 2019 , se deben imprimir los datos de todos los usuarios que son seguidores de al menos una suscripcion del 22 de abril del 2019.
                 </h4>
               </div>
               <div class="col-lg-6">
                 <form name="form-busqueda2" id="form-busqueda2" novalidate="novalidate">
                   <div class="form-group floating-label-form-group controls mb-0 pb-2">
                     <label>Codigo suscripcion</label>
-                    <input class="form-control" id="input-suscripcion-busqueda" type="number" placeholder="Codigo suscripcion" required="required" data-validation-required-message="Por favor ingresa el codigo.">
+                    <input class="form-control" id="input-suscripcion-busqueda" type="number" placeholder="Codigo suscripcion" required="required">
                   </div>
               </div>
               <div class="col-lg-6">
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-xl mt-4" id="sendMessageButton">Buscar</button>
+                    <button type="submit" class="btn btn-primary btn-xl mt-4" id="buscar-busqueda2">Buscar</button>
                   </div>
                 </form>
               </div>
@@ -401,7 +433,7 @@
               <h3 class="text-center text-uppercase text-secondary mb-0">USUARIOS Y FECHA</h3>
               <div class="row mt-4">
                 <div class="col-lg-12">
-                  <table class="table table-bordered table-hover" style="margin-left: 0.8%;">
+                  <table class="table table-bordered table-hover">
                     <thead class="thead-light">
                       <tr>
                         <th scope="col">Fecha inicio</th>
@@ -422,6 +454,11 @@
 
                     </tbody>
                   </table>
+                  <div class="alert alert-danger display-none" role="alert" id="no-busqueda2">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    Al parecer no hay registros, intenta una nueva busqueda <i class="fa fa-arrow-up"></i>
+                  </div>
                 </div>
               </div>
             </div>
