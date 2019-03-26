@@ -16,7 +16,7 @@ if (!strcmp($method,"insertarUsuario")){
 	$campus=$_POST['campus'];
 	$gustos=$_POST['gustos'];
 
-	$query="INSERT INTO `usuario`(`usuario_login`, `correo_institucional`, `nombre`, `facultad`, `contraseña`, `descripcion`, `tipo`, `telefono`, `disponibilidad`, `campus`, `gustos`) VALUES ('$usuarioLogin','$correoInstitucional','$nombre','$facultad','$contraseña',".(($descripcion=="")?'NULL':$descripcion).",'$tipo',".(($telefono=="")?'NULL':$telefono).",'$disponibilidad',".(($campus=="")?'NULL':$campus).",".(($gustos=="")?'NULL':$gustos).")";
+	$query="INSERT INTO `usuario`(`usuario_login`, `correo_institucional`, `nombre`, `facultad`, `contraseña`, `descripcion`, `tipo`, `telefono`, `disponibilidad`, `campus`, `gustos`) VALUES ('$usuarioLogin','$correoInstitucional','$nombre','$facultad','$contraseña',".(($descripcion=="")?'NULL':"'".$descripcion."'").",'$tipo',".(($telefono=="")?'NULL':"'".$telefono."'").",".(($disponibilidad=="")?'NULL':"'".$disponibilidad."'").",".(($campus=="")?'NULL':"'".$campus."'").",".(($gustos=="")?'NULL':"'".$gustos."'").")";
 	$result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
 	if($result){
 		echo 1;

@@ -112,6 +112,7 @@ $(document).ready(function() {
        document.getElementById("form-usuario").reset();
        verUsuarios();
        verSuscripciones();
+       obtenerUsuariosSuscripcion();
      }else{
        Swal(
          'Error!',

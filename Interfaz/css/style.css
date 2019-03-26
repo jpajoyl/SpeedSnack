@@ -60,4 +60,12 @@
 
 #consultas{
 	padding-top: 2rem !important;
+	padding-bottom: 2rem !important;
+}
+
+#busquedas{
+	padding-top: 3rem!important;
+}
+#info-busqueda1,#info-busqueda2{
+	text-align: justify;
 }
