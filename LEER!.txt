@@ -1,0 +1,18 @@
+IMPORTANTE:
+
+1) Para acceder a los formularios hay que entrar a la carpeta interfaz y en el archivo index.php se encuentra
+todo el codigo html de la pagina junto con todos los formularios y tablas.
+
+2) El archivo donde se encuentran los datos de creacion de la base de datos y algunas insersiones ejemplo 
+es creacionSpeedSnack.sql, y el archivo BaseDeDatosSpeedSnack.txt contiene unicamente el codigo para crear
+la base de datos (sin insersiones).
+
+3) El envio de informacion se hace por medio de ajax en javascript. Para acceder a esto hay que ingresar a
+la carpeta interfaz, luego a js y por ultimo a script.js, alli se encuentra el codigo de envio de informacion.
+
+4) Para acceder al archivo donde se encuentra la conexion y los controladores del proyecto hay que entrar a 
+interfaz y luego a php. CSpeedSnack.php controla las inserciones y los borrados. CSpeedSnackConsultasBusquedas.php
+controla las consultas y las busquedas solicitadas para la entrega 3.
+
+5) En la carpeta consultas se encuentra el codigo sql separado para las consultas y busquedas solicitadas
+para la entrega 3.
